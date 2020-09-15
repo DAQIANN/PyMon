@@ -18,3 +18,4 @@ def alldelete():
     print(x.deleted_count, " documents deleted.")
 
 alldelete()
+mycol.drop()
