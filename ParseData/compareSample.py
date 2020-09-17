@@ -21,10 +21,9 @@ def _parse_line(line):
         match = rx.search(line)
         if match:
             return key, match
-    #if there are no matches
+    # if there are no matches
     return None, None
 
-#file parser
 def parse_file(filepath):
     """
     Parameters:
@@ -34,6 +33,7 @@ def parse_file(filepath):
     Returns
         data : pd.Dataframe
             Parsed data
+
     """
 
     data = []  # create an empty list to collect the data
@@ -62,9 +62,9 @@ def parse_file(filepath):
                     value = value.strip()
 
                     row = {
-                        'School' : school,
-                        'Grade' : grade,
-                        'Student number' : number,
+                        'School': school,
+                        'Grade': grade,
+                        'Student number': number,
                         value_type: value
                     }
 
@@ -72,6 +72,7 @@ def parse_file(filepath):
                     line = file_object.readline()
 
             line = file_object.readline()
+
         # create a pandas DataFrame from the list of dicts
         data = pd.DataFrame(data)
         # set the School, Grade, and Student number as the index
