@@ -72,6 +72,8 @@ def parse_file(filepath):
                     line = file_object.readline()
 
             line = file_object.readline()
+        # data is a dict of values
+        print(data)
         # create a pandas DataFrame from the list of dicts
         data = pd.DataFrame(data)
         # set the School, Grade, and Student number as the index
